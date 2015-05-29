@@ -16,7 +16,7 @@ public class Principale {
 		String JsonText =xmlReader.recuperationJsonText(filePath_BPaaS1);
 		ArrayList<JSONObject> Individuals=jsonAnalyseur.extractIndividuals(JsonText);
 	    owlCreator.main(Individuals,type);
-		
+	    
 	}
 
 }
