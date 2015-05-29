@@ -71,6 +71,14 @@ public class jsonAnalyseur {
 	//methode vérifiée
 	} 
 	
+	public static String getTitle (int i){
+		JSONObject O1 = Child.get(i);
+		JSONObject O2 =(JSONObject) O1.get("properties");
+		
+		return (String) O2.get("title");
+	//methode vérifiée
+	} 
+	
 	
 public static String getResouceId(int i){
 		return Child.get(i).get("resourceId").toString();

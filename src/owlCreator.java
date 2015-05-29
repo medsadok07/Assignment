@@ -37,7 +37,9 @@ public class owlCreator {
         PrefixManager pm = new DefaultPrefixManager();
         OWLOntologyManager m = OWLManager.createOWLOntologyManager();
         OWLOntology o;
-        
+      /*  for(int zeze=0;zeze<21;zeze++){
+        System.out.println("testtttttttttttttttttttt : "+jsonAnalyseur.getTitle(zeze));
+        }*/
       try{  
        IRI iri = IRI.create("http://example.com/BPaaS2");
        //File f=new File("src/bpmo/bpmo.owl");
@@ -54,20 +56,60 @@ public class owlCreator {
     			   System.out.println(i+","+S);
     			   int j =0;
     			   if(type.contains("EPC")) { //recherche d'equivalents bmpo des elements epc
-    				   while(!(Mapping.listeBpmoElement.get(j).epcEquivalents.contains(S))||(j>Mapping.listeBpmoElement.size()))  {
+    				   int map=Mapping.listeBpmoElement.size();
+    				   boolean b=Mapping.listeBpmoElement.get(j).epcEquivalents.contains(S);
+    				   while(!(b)&&(j<map))  {
+    					  
     			    j++;
-    				   }  
-    		       }
+    			    b=Mapping.listeBpmoElement.get(j).epcEquivalents.contains(S);
+    				   }
+    				   
+    				   String equivalent=Mapping.listeBpmoElement.get(j).type;//equivalent contiendra l'equivalent trouvé à j
+					   boolean bool;
+					   System.out.println(i+","+equivalent+", "+jsonAnalyseur.getTitle(i));// pour verifier le mapping
+					    //boolean y=jsonAnalyseur.getTitle(i).equalsIgnoreCase("");
+					    boolean t=jsonAnalyseur.getTitle(i)==null;
+					   bool =  t; 
+					    if(bool)
+						   {//si l'element n'as pas de name comme les ControlFlowConnector
+							   new Individual(""+equivalent+""+i,equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);//création d'un individual qu'on va par la suite créer
+						       
+						   }
+						   else{ 
+							   new Individual(jsonAnalyseur.getTitle(i),equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);
+						   
+						   }
+    			   
+    			   
+    			   }
     			   else if (type.contains("BPMN")) {//recherche d'equivalents bmpo des elements bpmn
     				   while(!(Mapping.listeBpmoElement.get(j).bpmnEquivalents.contains(S))&&(j<Mapping.listeBpmoElement.size()-1))  {
     			    j++;
     				   }  
     		
-          		    }
-    			   
-					   String equivalent=Mapping.listeBpmoElement.get(j).type;//equivalent contiendra l'equivalent trouvé à j
+    				   String equivalent=Mapping.listeBpmoElement.get(j).type;//equivalent contiendra l'equivalent trouvé à j
+					   boolean bool;
 					   System.out.println(i+","+equivalent+", "+jsonAnalyseur.getName(i));// pour verifier le mapping
-					   boolean bool = jsonAnalyseur.getName(i).equalsIgnoreCase("");
+					    bool = jsonAnalyseur.getName(i).equalsIgnoreCase("");
+					    if(bool)
+						   {//si l'element n'as pas de name comme les ControlFlowConnector
+							   new Individual(""+equivalent+""+i,equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);//création d'un individual qu'on va par la suite créer
+						       
+						   }
+						   else{ 
+							   new Individual(jsonAnalyseur.getName(i),equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);
+						   
+						   }
+    			   
+    			   }
+    			   
+				/*	   String equivalent=Mapping.listeBpmoElement.get(j).type;//equivalent contiendra l'equivalent trouvé à j
+					   boolean bool;
+					   if(type.contains("EPC")){ System.out.println(i+","+equivalent+", "+jsonAnalyseur.getTitle(i));// pour verifier le mapping
+					    bool = jsonAnalyseur.getTitle(i).equalsIgnoreCase(""); }
+					  else {
+					   System.out.println(i+","+equivalent+", "+jsonAnalyseur.getName(i));// pour verifier le mapping
+					    bool = jsonAnalyseur.getName(i).equalsIgnoreCase("");}
 					   if(bool)
 					   {//si l'element n'as pas de name comme les ControlFlowConnector
 						   new Individual(""+equivalent+""+i,equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);//création d'un individual qu'on va par la suite créer
@@ -76,7 +118,7 @@ public class owlCreator {
 					   else{ 
 						   new Individual(jsonAnalyseur.getName(i),equivalent,A.get(i),Mapping.listeBpmoElement.get(j).properties);
 					   
-					   }
+					   }*/
 				   
     		   
     	   }
@@ -168,7 +210,7 @@ public class owlCreator {
       
 
        
-       File file = new File("BPaaS2.owl");//créer le fichier
+       File file = new File("BPaaS1.owl");//créer le fichier
        FileOutputStream fop;
 		fop = new FileOutputStream(file);
 		m.saveOntology(o,fop);

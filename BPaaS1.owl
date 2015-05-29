@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/BPaaS2#"
+     xml:base="http://example.com/BPaaS2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:BPaaS2="http://example.com/BPaaS2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.com/BPaaS2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BPaaS2#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BPaaS2#hasSource"/>
+    
+
+
+    <!-- http://example.com/BPaaS2#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BPaaS2#hasTarget"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BPaaS2#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/BPaaS2#hasDescription"/>
+    
+
+
+    <!-- http://example.com/BPaaS2#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/BPaaS2#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector -->
+
+    <owl:Class rdf:about="http://example.com/BPaaS2#ControlFlowConnector"/>
+    
+
+
+    <!-- http://example.com/BPaaS2#IntermediateEvent -->
+
+    <owl:Class rdf:about="http://example.com/BPaaS2#IntermediateEvent"/>
+    
+
+
+    <!-- http://example.com/BPaaS2#MultipleChoice -->
+
+    <owl:Class rdf:about="http://example.com/BPaaS2#MultipleChoice"/>
+    
+
+
+    <!-- http://example.com/BPaaS2#Task -->
+
+    <owl:Class rdf:about="http://example.com/BPaaS2#Task"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector10 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector10">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Payment_to_be_affected"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Send_invoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector12 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector12">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Invoice_sent"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Send_invoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector13 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector13">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#MultipleChoice1"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Order_processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector15 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector15">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Invoice_cancelled"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Send_cancel_notification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector17 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector17">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Notification_sent"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Send_cancel_notification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector19 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector19">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Order_processing"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Order_received"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector20 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector20">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Payment_to_be_affected"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Release_invoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector3">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Invoice_cancelled"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#MultipleChoice1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector5 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector5">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Invoice_posted"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#MultipleChoice1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#ControlFlowConnector7 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#ControlFlowConnector7">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#ControlFlowConnector"/>
+        <hasSource rdf:resource="http://example.com/BPaaS2#Invoice_posted"/>
+        <hasTarget rdf:resource="http://example.com/BPaaS2#Release_invoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Invoice_cancelled -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Invoice_cancelled">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invoice cancelled</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Invoice_posted -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Invoice_posted">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invoice posted</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Invoice_sent -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Invoice_sent">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invoice sent</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#MultipleChoice1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#MultipleChoice1">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#MultipleChoice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Notification_sent -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Notification_sent">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notification sent</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Order_processing -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Order_processing">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#Task"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order processing</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Order_received -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Order_received">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order received</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Payment_to_be_affected -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Payment_to_be_affected">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#IntermediateEvent"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payment to be affected</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Release_invoice -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Release_invoice">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#Task"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Release invoice</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Send_cancel_notification -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Send_cancel_notification">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#Task"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Send cancel notification</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BPaaS2#Send_invoice -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BPaaS2#Send_invoice">
+        <rdf:type rdf:resource="http://example.com/BPaaS2#Task"/>
+        <hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasDescription>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Send invoice</hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.0.1) http://owlapi.sourceforge.net -->
+

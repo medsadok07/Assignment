@@ -11,9 +11,9 @@ public class Principale {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String type =xmlReader.typeDiagramme(filePath_BPaaS2);
+		String type =xmlReader.typeDiagramme(filePath_BPaaS1);
 		System.out.println("type,"+type);
-		String JsonText =xmlReader.recuperationJsonText(filePath_BPaaS2);
+		String JsonText =xmlReader.recuperationJsonText(filePath_BPaaS1);
 		ArrayList<JSONObject> Individuals=jsonAnalyseur.extractIndividuals(JsonText);
 	    owlCreator.main(Individuals,type);
 		
